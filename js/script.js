@@ -16,14 +16,17 @@ let finalCost;
 
 if(age < 18){
     finalCost = (totalCost * 0.8).toFixed(2);
-    console.log(finalCost);
+    document.getElementById("price").innerHTML = finalCost +" " + "euro";
+    document.getElementById("discount").innerHTML = "Il biglietto è scontato del 20% in quanto hai meno di 18 anni";
 }else if(age > 65){
     finalCost = (totalCost * 0.6).toFixed(2);
-    console.log(finalCost);
+    document.getElementById("price").innerHTML = finalCost +" " + "euro";
+    document.getElementById("discount").innerHTML = "Il biglietto è scontato del 40% in quanto hai più di 65 anni";
 }else{
     finalCost = (totalCost).toFixed(2);
-    console.log(totalCost);
+    document.getElementById("price").innerHTML = finalCost +" " + "euro";
+    document.getElementById("discount").innerHTML = "Il biglietto non è scontato";
 }
 
-document.getElementById("price").innerHTML = finalCost +" " + "euro";
+
 
