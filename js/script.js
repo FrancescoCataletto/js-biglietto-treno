@@ -13,11 +13,11 @@ const age = prompt("Quanti anni hai?");
 let totalCost = parseInt(howManyKm) * 0.21;
 
 if(age < 18){
-    console.log(totalCost * 0.8);
+    console.log((totalCost * 0.8).toFixed(2));
 }else if(age > 65){
-    console.log(totalCost * 0.6);
+    console.log((totalCost * 0.6).toFixed(2));
 }else{
-    console.log(totalCost);
+    console.log((totalCost).toFixed(2));
 }
 
 
