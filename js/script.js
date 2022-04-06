@@ -10,14 +10,20 @@ L’output del prezzo finale va messo fuori in forma umana (con massimo due deci
 const howManyKm = prompt("Quanti chilometri vuoi percorrere?");
 const age = prompt("Quanti anni hai?");
 
-let totalCost = parseInt(howManyKm) * 0.21;
+const totalCost = parseInt(howManyKm) * 0.21;
+
+let finalCost;
 
 if(age < 18){
-    console.log((totalCost * 0.8).toFixed(2));
+    finalCost = (totalCost * 0.8).toFixed(2);
+    console.log(finalCost);
 }else if(age > 65){
-    console.log((totalCost * 0.6).toFixed(2));
+    finalCost = (totalCost * 0.6).toFixed(2);
+    console.log(finalCost);
 }else{
-    console.log((totalCost).toFixed(2));
+    finalCost = (totalCost).toFixed(2);
+    console.log(totalCost);
 }
 
+document.getElementById("price").innerHTML = finalCost +" " + "euro";
 
